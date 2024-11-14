@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 #define EMPTY_POINTER -1
-#define DATA_BLOCK_NAME 50
+#define DATA_BLOCK_N 50
 
 typedef struct Entity
 {
