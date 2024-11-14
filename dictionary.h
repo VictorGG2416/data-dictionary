@@ -3,8 +3,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+
 #define EMPTY_POINTER -1
 #define DATA_BLOCK_NAME 50
+
 typedef struct Entity
 {
     char name[DATA_BLOCK_NAME];
@@ -13,6 +15,9 @@ typedef struct Entity
     long nextEntity;
 }ENTITY;
 
-int initializeDataDictionary(const char *dictionaryName) 
+FILE* initializeDataDictionary(const char *dictionaryName);
+
+int appendEntity(FILE* dataDictionary, ENTITY newEntity);
+void reorderEntities(FILE* dataDictionary, ENTITY newEntity, long newEntityDirection);
 
 #endif

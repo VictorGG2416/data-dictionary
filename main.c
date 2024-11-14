@@ -18,8 +18,9 @@ int main(int argc, char** argv) {
     newEntity.atributesPointer= EMPTY_POINTER;
     newEntity.nextEntity= EMPTY_POINTER;
     
-    appendEntity(dataDictionary,newEntity);
-    
+   long entityDirection= appendEntity(dataDictionary,newEntity);
+    recorderEntities(dataDictionary,newEntity,entityDirection);
+
     fclose(dataDictionary);
 
     return 0;
